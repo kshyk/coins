@@ -20,7 +20,7 @@ jobs:
         env:
           TESTINGBOT_KEY: ${{ secrets.TESTINGBOT_KEY }}
           TESTINGBOT_SECRET: ${{ secrets.TESTINGBOT_SECRET }}
-        run: mvn clean test
+        run: mvn clean -ntp test
 
       - name: Copying artifacts
         run: mkdir report && cp target/surefire-reports/*.xml report
