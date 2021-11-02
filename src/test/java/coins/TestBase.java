@@ -21,6 +21,7 @@ public abstract class TestBase implements TestWatcher {
     @BeforeAll
     protected void setupSuite() {
         Configuration.timeout = 5000;
+        Configuration.fastSetValue = false;
         Configuration.remote = "https://" + KEY + ":" + SECRET + "@hub.testingbot.com/wd/hub";
     }
 

@@ -1,15 +1,20 @@
 package coins;
 
+import coins.pageobjects.LoginPage;
+import coins.pageobjects.MenuBar;
 import com.codeborne.selenide.Selenide;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.$;
-
 public class CoinsTests extends TestBase {
+    @BeforeAll
+    void openPage() {
+        Selenide.open("https://freebitco.in/");
+    }
+
     @Test
     void freeBitcoinCronLottery() {
-        Selenide.open("https://freebitco.in/");
-        $(".login_menu_button>a").hover().click();
-        $("#login_form_btc_address").setValue("");
+        MenuBar.clickLoginMenuButton();
+        LoginPage.login();
     }
 }
