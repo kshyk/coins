@@ -6,12 +6,14 @@
     <version>1.0</version>
 
     <properties>
-        <jdk.version>15</jdk.version>
+        <jdk.version>16</jdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.jupiter.version>5.8.1</junit.jupiter.version>
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
         <selenide.version>6.0.3</selenide.version>
+        <testingbotrest.version>1.0.6</testingbotrest.version>
+        <lombok.version>1.18.22</lombok.version>
     </properties>
 
     <dependencies>
@@ -25,6 +27,17 @@
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
             <version>${selenide.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.testingbot</groupId>
+            <artifactId>testingbotrest</artifactId>
+            <version>${testingbotrest.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

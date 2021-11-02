@@ -2,12 +2,10 @@ package coins;
 
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
 
 import static com.codeborne.selenide.Selenide.$;
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class CoinsTests {
+public class CoinsTests extends TestBase {
     @Test
     void freeBitcoinCronLottery() {
         Selenide.open("https://freebitco.in/");
