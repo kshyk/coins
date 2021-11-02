@@ -20,6 +20,8 @@ jobs:
         env:
           TESTINGBOT_KEY: ${{ secrets.TESTINGBOT_KEY }}
           TESTINGBOT_SECRET: ${{ secrets.TESTINGBOT_SECRET }}
+          EMAIL: ${{ secrets.EMAIL }}
+          PASSWORD: ${{ secrets.PASSWORD }}
         run: mvn clean -ntp test
 
       - name: Copying artifacts
